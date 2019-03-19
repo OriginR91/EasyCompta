@@ -1,8 +1,8 @@
 ﻿from django.urls import path
-from User import views
+from User.views import *
 
 urlpatterns = [
-    path('', views.index),
-    path('subscribe/', views.subscribe),
-    path('<str:user>/', views.getUser),
+    path('', index),
+    path('subscribe/', subscribe),
+    path('<str:user>/', getUser),
 ]
