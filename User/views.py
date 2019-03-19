@@ -15,7 +15,13 @@ def subscribe(request) :
     fileCss = sys._getframe().f_code.co_name
 
     if request.method == 'POST' :
-        return HttpResponseRedirect('/User/')
+        form = UserForm(request.POST)
+        if form.is_valid() :
+            if(request.POST.get('password') == request.POST.get('passwordVerif')) :
+                form.save()
+                return HttpResponseRedirect('/User/')
+            else :
+                return HttpResponseRedirect('/User/subscribe/error')
     else :
         form = UserForm()
         template = loader.get_template('User/subscribe.html')

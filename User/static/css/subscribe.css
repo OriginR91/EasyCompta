@@ -16,7 +16,7 @@ footer .footer-top {
 }
 #subscribe label {
     display: block;
-    width: 110px;
+
     text-align: left;
     margin-right: 10px;
     color: #6262a0;
@@ -30,6 +30,7 @@ footer .footer-top {
     border: 1px solid #6262a0;
     width: 250px;
     height: 25px;
+    color: #333;
 }
 #subscribe input[type=submit] {
     margin-top: 20px;

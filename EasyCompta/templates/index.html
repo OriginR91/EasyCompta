@@ -1,4 +1,4 @@
-{% load static %}
+﻿{% load static %}
 <!DOCTYPE html>
 <html dir="ltr" lang="en-US">
 <head>
@@ -41,7 +41,7 @@
 <header id="navbar-spy" class="header header-1 header-transparent header-fixed">
     <nav id="primary-menu" class="navbar navbar-expand-lg navbar-dark">
         <div class="container">
-            <a class="navbar-brand" href="index-2.html">
+            <a class="navbar-brand" href="/">
                 <img class="logo logo-dark" src="{% static 'images/logo/logo-dark.png' %}" alt="Kolaso Logo">
             </a>
             <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarContent" aria-controls="navbarContent" aria-expanded="false" aria-label="Toggle navigation">
@@ -49,7 +49,7 @@
             </button>
             <div class="collapse navbar-collapse" id="navbarContent">
                 <ul class="navbar-nav ml-auto">
-                    <li class="active"><a data-scroll="scrollTo" href="#hero">home</a>
+                    <li class="active"><a data-scroll="scrollTo" href="/">home</a>
                     </li>
                     <li><a data-scroll="scrollTo" href="#feature2">feature</a>
                     </li>
@@ -57,7 +57,7 @@
                     </li>
                     <li><a data-scroll="scrollTo" href="#clients">clients</a>
                     </li>
-                    <li><a data-scroll="scrollTo" href="#cta">signup</a>
+                    <li><a data-scroll="scrollTo" href="/User/subscribe/">S'inscrire</a>
                     </li>
                 </ul>
             </div>
@@ -71,16 +71,16 @@
     <div class="container">
         <div class="row row-content">
             <div class="col-12 col-md-12 col-lg-6">
-                <div class="hero-headline">Engage more users & supercharge your landing conversion rates</div>
+                <div class="hero-headline">Gérez facilement la comptabilité de votre société. Et c'est gratuit !</div>
                 <div class="hero-bio">Launch your campaign and benefit from our expertise on designing and managing conversion centered landing pages.</div>
                 <div class="hero-action">
-                    <a href="#pricing" class="btn btn--gradient" data-scroll="scrollTo">Get Started Now</a>
-                    <span class="video-button">             
+                    <a href="/User/subscribe/" class="btn btn--gradient" data-scroll="scrollTo">Je commence</a>
+                    <!--<span class="video-button">             
                         <a class="popup-video" href="https://www.youtube.com/watch?v=nrJtHemSPW4">
                             <span class="player-text"> Watch a Demo</span>
                             <span class="btn-player"><img src="{% static 'images/video/player.svg' %}" alt="video player"></span>
                         </a>
-                    </span>
+                    </span>-->
                 </div>
             </div>
             <div class="col-12 col-md-12 col-lg-6">
@@ -243,7 +243,7 @@
                     <!-- Testimonial #3 -->
                     <div class="testimonial-panel">
                         <div class="testimonial-body">
-                            <p>Siena has helped us grow our business by optimizing our landing pages. We’ve increased conversion rates by 120%.</p>
+                            <p>Siena has helped us grow our business by optimizing our landing pages. Weâ€™ve increased conversion rates by 120%.</p>
                         <div class="testimonial-author">
                                 <h5>Bone Datche - 7oroof CEO</h5>
                             </div>

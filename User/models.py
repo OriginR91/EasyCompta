@@ -12,4 +12,14 @@ class User(models.Model) :
     password = models.CharField(max_length=30)
 
     def __str__(self) :
-        return self.pseudo
+        return "{} - {} - {} - {} - {} - {} - {} - {} - {}".format(
+            self.nom,
+            self.prenom,
+            self.societe,
+            self.adresse,
+            self.cp,
+            self.ville,
+            self.pathlogo,
+            self.pseudo,
+            self.password
+        )

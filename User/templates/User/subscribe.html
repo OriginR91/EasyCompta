@@ -11,6 +11,8 @@
             <form method='POST' id="subscribe">
                 {% csrf_token %}
                 {{ form.as_p }}
+                <label for="passwordVerif">Confirmer le mot de passe :</label>
+                <input type="password" id="passwordVerif" name="passwordVerif" required />
                 <input type="submit" value="Enregistrer" />
             </form>
         </div>
