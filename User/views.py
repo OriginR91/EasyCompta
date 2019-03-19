@@ -18,8 +18,7 @@ def subscribe(request) :
         form = UserForm(request.POST)
         if form.is_valid() :
             form.save(commit=False)
-            if(request.POST.get('password') == request.POST.get('passwordVerif') and
-            request.POST.get('email') == request.POST.get('emailConfirm')) :
+            if request.POST.get('password') == request.POST.get('passwordVerif') and request.POST.get('email') == request.POST.get('emailConfirm') :
                 form.save()
                 return HttpResponseRedirect('/User/')
             else :
