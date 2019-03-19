@@ -1,7 +1,7 @@
+import sys
 from django.shortcuts import render, loader
 from django.http import HttpResponse, HttpResponseRedirect
 from User.forms import UserForm
-import sys
 
 # Globals
 fileCss = ""
