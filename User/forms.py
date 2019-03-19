@@ -14,5 +14,5 @@ class UserForm(forms.ModelForm) :
             'pathlogo': 'Logo',
             'password': 'Mot de passe'
         }
-        fields = ('nom', 'prenom', 'email', 'email', 'societe', 'adresse', 'cp', 'ville', 'pathlogo', 'pseudo', 'password')
+        fields = ('nom', 'prenom', 'email', 'societe', 'adresse', 'cp', 'ville', 'pathlogo', 'pseudo', 'password')
         
