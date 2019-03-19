@@ -21,7 +21,7 @@ def subscribe(request) :
                 form.save()
                 return HttpResponseRedirect('/User/')
             else :
-                return HttpResponseRedirect('/User/subscribe/error')
+                return HttpResponseRedirect('/User/subscribe/error/')
     else :
         form = UserForm()
         template = loader.get_template('User/subscribe.html')
