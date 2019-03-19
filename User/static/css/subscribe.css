@@ -1,18 +1,27 @@
-﻿#subscribe {
-    width: 600px;
-    border: 1px solid black;
+﻿footer {
+    padding: 0;
+}
+footer .footer-top {
+    padding: 20px 0 20px 0;
+}
+#wrapper section {
+    padding: 140px 0 50px 0;
+}
+
+#subscribe {
+    width: 250px;
     padding: 0 0 20px 0;
+    margin: auto;
     font-family: "Roboto", sans-serif;
 }
 #subscribe label {
     display: block;
-    float: left;
-    width: 100px;
-    text-align: right;
+    width: 110px;
+    text-align: left;
     margin-right: 10px;
     color: #6262a0;
     font-size: 16px;
-    line-height: 25px;
+    margin: 0;
 }
 
 #subscribe input[type=text],
@@ -23,7 +32,6 @@
     height: 25px;
 }
 #subscribe input[type=submit] {
-    margin-left: 110px;
     margin-top: 20px;
     width: 250px;
     height: 60px;
