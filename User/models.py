@@ -7,7 +7,7 @@ class User(models.Model) :
     adresse = models.CharField(max_length=255)
     cp = models.CharField(max_length=20)
     ville = models.CharField(max_length=60)
-    pathlogo = models.TextField()
+    pathlogo = models.CharField(max_length=255)
     pseudo = models.CharField(max_length=30)
     password = models.CharField(max_length=30)
 
