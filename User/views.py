@@ -1,6 +1,10 @@
 from django.shortcuts import render, loader
 from django.http import HttpResponse, HttpResponseRedirect
 from User.forms import UserForm
+import sys
+
+# Globals
+fileCss = ""
 
 def index(request) :
     template = loader.get_template('User/index.html')
@@ -8,18 +12,20 @@ def index(request) :
     return HttpResponse(template.render(context, request))
 
 def subscribe(request) :
+    fileCss = sys._getframe().f_code.co_name
+
     if request.method == 'POST' :
         return HttpResponseRedirect('/User/')
     else :
         form = UserForm()
         template = loader.get_template('User/subscribe.html')
         context = {
-            'form': form
+            'form': form,
+            'fileCss': fileCss
         }
         return HttpResponse(template.render(context, request))
 
-def getUser(request, user="ok") :
-    user = "none"
+def getUser(request, user) :
     template = loader.get_template('User/user.html')
     context = {}
     return HttpResponse(template.render(context, request))

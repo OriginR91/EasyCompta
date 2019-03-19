@@ -1,0 +1,13 @@
+﻿{% load static %}
+<!doctype html>
+<html lang="fr">
+    <head>
+        <title></title>
+        <meta charset="utf-8" />
+        <link rel="stylesheet" type="text/css" href="{% static 'css/' %}{{fileCss}}.css" />
+    </head>
+    <body>
+        {% block content %}
+        {% endblock %}
+    </body>
+</html>
