@@ -10,13 +10,64 @@
 
             <form method='POST' id="subscribe">
                 {% csrf_token %}
-                {{ form.as_p }}
-                <label for="passwordVerif">Confirmer le mot de passe :</label>
-                <input type="password" id="passwordVerif" name="passwordVerif" required />
+
+                <div class="lineForm">
+                    <div class="containForm">
+                        <label for="{{ form.nom.id_for_label }}">Nom :</label>
+                        {{ form.nom }}
+                    </div>
+                    <div class="containForm">
+                        <label for="{{ form.prenom.id_for_label }}">Prénom :</label>
+                        {{ form.prenom }}
+                    </div>
+                </div>
+
+                <div class="lineForm">
+                    <div class="containForm">
+                        <label for="{{ form.societe.id_for_label }}">Société</label>
+                        {{ form.societe }}
+                    </div>
+                    <div class="containForm">
+                        <label for="{{ form.adresse.id_for_label }}">Adresse :</label>
+                        {{ form.adresse }}
+                    </div>
+                    <div class="containForm">
+                        <label for="{{ form.cp.id_for_label }}">Code postal :</label>
+                        {{ form.cp }}
+                    </div>
+                </div>
+
+                <div class="lineForm" style="margin-top: 80px;">
+                    <h6 style="font-size: 16px;">Informations d'identification :</h6>
+                    <div class="containForm">
+                        <label for="{{ form.email.id_for_label }}">Email :</label>
+                        {{ form.email }}
+                    </div>
+                    <div class="containForm">
+                        <label for="{{ form.emailConfirm.id_for_label }}">Confirmez l'email :</label>
+                        {{ form.emailConfirm }}
+                    </div>
+                </div>
+
+                <div class="lineForm">
+                    <div class="containForm">
+                        <label for="{{ form.pseudo.id_for_label }}">Pseudo :</label>
+                        {{ form.pseudo }}
+                    </div>
+                    <div class="containForm">
+                        <label for="{{ form.password.id_for_label }}">Mot de passe :</label>
+                        {{ form.password }}
+                    </div>
+                    <div class="containForm">
+                        <label for="{{ form.cp.id_for_label }}">Confirmez le mot de passe :</label>
+                        {{ form.cp }}
+                    </div>
+                </div>
+
                 <input type="submit" value="Enregistrer" />
             </form>
         </div>
     </div>
-</div>
+
 
 {% endblock %}

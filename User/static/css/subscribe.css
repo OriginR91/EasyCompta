@@ -9,10 +9,19 @@ footer .footer-top {
 }
 
 #subscribe {
-    width: 250px;
+    width: 75%;
     padding: 0 0 20px 0;
     margin: auto;
     font-family: "Roboto", sans-serif;
+}
+#subscribe .lineForm {
+    overflow: auto;
+    margin-bottom: 30px;
+}
+#subscribe .containForm {
+    display: block;
+    float: left;
+    margin-right: 60px;
 }
 #subscribe label {
     display: block;
@@ -34,7 +43,8 @@ footer .footer-top {
     color: #333;
 }
 #subscribe input[type=submit] {
-    margin-top: 20px;
+    display: block;
+    margin-top: 60px;
     width: 250px;
     height: 60px;
     background-color: #664ffa;
@@ -43,4 +53,10 @@ footer .footer-top {
     border: none;
     cursor: pointer;
     border-radius: 5px;
+    float: left;
+    clear: both;
+}
+
+#id_nom {
+    width: 250px !important;
 }
