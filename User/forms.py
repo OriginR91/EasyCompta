@@ -31,4 +31,3 @@ class UserForm(forms.ModelForm) :
             'password',
             'passwordConfirm'
         )
-        

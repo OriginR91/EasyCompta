@@ -52,6 +52,9 @@ MIDDLEWARE = [
 
 ROOT_URLCONF = 'EasyCompta.urls'
 
+LOGIN_REDIRECT_URL = '/Account/'
+LOGIN_URL = '/User/signin/'
+
 TEMPLATES = [
     {
         'BACKEND': 'django.template.backends.django.DjangoTemplates',

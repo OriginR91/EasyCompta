@@ -1,5 +1,8 @@
 import sys
 from django.shortcuts import render, loader
+from django.contrib.auth import authenticate
+from django.contrib.auth.forms import AuthenticationForm
+from django.contrib.auth.decorators import login_required
 from django.http import HttpResponse, HttpResponseRedirect
 from User.forms import UserForm
 
@@ -10,6 +13,14 @@ def index(request) :
     template = loader.get_template('User/index.html')
     context = {}
     return HttpResponse(template.render(context, request))
+
+def signin(request) :
+    if request.method == 'POST' :
+        pass
+    else :
+        template = loader.get_template('User/signin.html')
+        context = {}
+        return HttpResponse(template.render(context, request))
 
 def subscribe(request) :
     fileCss = sys._getframe().f_code.co_name
@@ -35,7 +46,8 @@ def subscribe(request) :
         }
         return HttpResponse(template.render(context, request))
 
-def getUser(request, user) :
-    template = loader.get_template('User/user.html')
+@login_required
+def account(request) :
+    template = loader.get_template('User/account.html')
     context = {}
     return HttpResponse(template.render(context, request))

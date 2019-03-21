@@ -3,7 +3,8 @@ from .views import *
 
 urlpatterns = [
     path('', index),
+    path('signin/', signin),
     path('subscribe/', subscribe),
     path('subscribe/error/', subscribe),
-    path('<str:user>/', getUser),
+    path('<str:user>/', account),
 ]
