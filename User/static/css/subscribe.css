@@ -44,7 +44,7 @@ footer .footer-top {
 }
 #subscribe input[type=submit] {
     display: block;
-    margin-top: 60px;
+    margin-top: 20px;
     width: 250px;
     height: 60px;
     background-color: #664ffa;
@@ -57,6 +57,18 @@ footer .footer-top {
     clear: both;
 }
 
-#id_nom {
-    width: 250px !important;
+#id_societe {
+    width: 200px !important;
+}
+#id_email, #id_emailConfirm {
+    width: 350px !important;
+}
+#id_cp, #id_ville {
+    width: 120px !important;
+}
+#id_pathlogo {
+    min-width: 450px !important;
+}
+#id_pseudo, #id_password, #id_passwordConfirm {
+    width: 220px !important;
 }

@@ -3,6 +3,7 @@ from User.models import User
 
 class UserForm(forms.ModelForm) :
     emailConfirm = forms.EmailField(max_length=70, label='Confirmez l\'email')
+    passwordConfirm = forms.CharField(max_length=30, label='Confirmez le mot de passe')
 
     class Meta:
         model = User
@@ -27,6 +28,7 @@ class UserForm(forms.ModelForm) :
             'ville', 
             'pathlogo', 
             'pseudo', 
-            'password'
+            'password',
+            'passwordConfirm'
         )
         

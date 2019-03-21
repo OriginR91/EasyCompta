@@ -35,6 +35,17 @@
                         <label for="{{ form.cp.id_for_label }}">Code postal :</label>
                         {{ form.cp }}
                     </div>
+                    <div class="containForm">
+                        <label for="{{ form.ville.id_for_label }}">Ville :</label>
+                        {{ form.ville }}
+                    </div>
+                </div>
+
+                <div class="lineForm">
+                    <div class="containForm">
+                        <label for="{{ form.pathlogo.id_for_label }}">Logo :</label>
+                        {{ form.pathlogo }}
+                    </div>
                 </div>
 
                 <div class="lineForm" style="margin-top: 80px;">
@@ -59,8 +70,8 @@
                         {{ form.password }}
                     </div>
                     <div class="containForm">
-                        <label for="{{ form.cp.id_for_label }}">Confirmez le mot de passe :</label>
-                        {{ form.cp }}
+                        <label for="{{ form.passwordConfirm.id_for_label }}">Confirmez le mot de passe :</label>
+                        {{ form.passwordConfirm }}
                     </div>
                 </div>
 
