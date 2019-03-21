@@ -1,84 +1,77 @@
 ﻿{% extends 'indexIntegration.html' %}
 
 {% block content %}
-
-    <div class="row clearfix">
-        <div class="col-12 col-sm-12 col-md-12 col-lg-8 offset-lg-2">
-            <div class="heading heading-1 text--center mb-40">
-                <h2>Inscription</h2>
-            </div>
-
-            <form method='POST' id="subscribe">
-                {% csrf_token %}
-
-                <div class="lineForm">
-                    <div class="containForm">
-                        <label for="{{ form.nom.id_for_label }}">Nom :</label>
-                        {{ form.nom }}
-                    </div>
-                    <div class="containForm">
-                        <label for="{{ form.prenom.id_for_label }}">Prénom :</label>
-                        {{ form.prenom }}
-                    </div>
-                </div>
-
-                <div class="lineForm">
-                    <div class="containForm">
-                        <label for="{{ form.societe.id_for_label }}">Société</label>
-                        {{ form.societe }}
-                    </div>
-                    <div class="containForm">
-                        <label for="{{ form.adresse.id_for_label }}">Adresse :</label>
-                        {{ form.adresse }}
-                    </div>
-                    <div class="containForm">
-                        <label for="{{ form.cp.id_for_label }}">Code postal :</label>
-                        {{ form.cp }}
-                    </div>
-                    <div class="containForm">
-                        <label for="{{ form.ville.id_for_label }}">Ville :</label>
-                        {{ form.ville }}
-                    </div>
-                </div>
-
-                <div class="lineForm">
-                    <div class="containForm">
-                        <label for="{{ form.pathlogo.id_for_label }}">Logo :</label>
-                        {{ form.pathlogo }}
-                    </div>
-                </div>
-
-                <div class="lineForm" style="margin-top: 80px;">
-                    <h6 style="font-size: 16px;">Informations d'identification :</h6>
-                    <div class="containForm">
-                        <label for="{{ form.email.id_for_label }}">Email :</label>
-                        {{ form.email }}
-                    </div>
-                    <div class="containForm">
-                        <label for="{{ form.emailConfirm.id_for_label }}">Confirmez l'email :</label>
-                        {{ form.emailConfirm }}
-                    </div>
-                </div>
-
-                <div class="lineForm">
-                    <div class="containForm">
-                        <label for="{{ form.pseudo.id_for_label }}">Pseudo :</label>
-                        {{ form.pseudo }}
-                    </div>
-                    <div class="containForm">
-                        <label for="{{ form.password.id_for_label }}">Mot de passe :</label>
-                        {{ form.password }}
-                    </div>
-                    <div class="containForm">
-                        <label for="{{ form.passwordConfirm.id_for_label }}">Confirmez le mot de passe :</label>
-                        {{ form.passwordConfirm }}
-                    </div>
-                </div>
-
-                <input type="submit" value="Enregistrer" />
-            </form>
-        </div>
+    <div class="heading heading-1 text--center mb-40">
+        <h2>Inscription</h2>
     </div>
 
+    <form method='POST' id="subscribe">
+        {% csrf_token %}
 
+        <div class="lineForm">
+            <div class="containForm">
+                <label for="{{ formUser.last_name.id_for_label }}">Nom :</label>
+                {{ formUser.last_name }}
+            </div>
+            <div class="containForm">
+                <label for="{{ formUser.first_name.id_for_label }}">Prénom :</label>
+                {{ formUser.first_name }}
+            </div>
+        </div>
+
+        <div class="lineForm">
+            <div class="containForm">
+                <label for="{{ formProfil.societe.id_for_label }}">Société</label>
+                {{ formProfil.societe }}
+            </div>
+            <div class="containForm">
+                <label for="{{ formProfil.adresse.id_for_label }}">Adresse :</label>
+                {{ formProfil.adresse }}
+            </div>
+            <div class="containForm">
+                <label for="{{ formProfil.cp.id_for_label }}">Code postal :</label>
+                {{ formProfil.cp }}
+            </div>
+            <div class="containForm">
+                <label for="{{ formProfil.ville.id_for_label }}">Ville :</label>
+                {{ formProfil.ville }}
+            </div>
+        </div>
+
+        <div class="lineForm">
+            <div class="containForm">
+                <label for="{{ formProfil.pathlogo.id_for_label }}">Logo :</label>
+                {{ formProfil.pathlogo }}
+            </div>
+        </div>
+
+        <div class="lineForm" style="margin-top: 80px;">
+            <h6 style="font-size: 16px;">Informations d'identification :</h6>
+            <div class="containForm">
+                <label for="{{ foformUserrm.email.id_for_label }}">Email :</label>
+                {{ formUser.email }}
+            </div>
+            <div class="containForm">
+                <label for="{{ formUser.emailConfirm.id_for_label }}">Confirmez l'email :</label>
+                {{ formUser.emailConfirm }}
+            </div>
+        </div>
+
+        <div class="lineForm">
+            <div class="containForm">
+                <label for="{{ formUser.username.id_for_label }}">Pseudo :</label>
+                {{ formUser.username }}
+            </div>
+            <div class="containForm">
+                <label for="{{ formUser.password.id_for_label }}">Mot de passe :</label>
+                {{ formUser.password }}
+            </div>
+            <div class="containForm">
+                <label for="{{ formUser.passwordConfirm.id_for_label }}">Confirmez le mot de passe :</label>
+                {{ formUser.passwordConfirm }}
+            </div>
+        </div>
+
+        <input type="submit" value="Enregistrer" />
+    </form>
 {% endblock %}

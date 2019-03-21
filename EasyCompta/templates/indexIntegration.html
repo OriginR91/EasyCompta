@@ -29,7 +29,7 @@
                                 </li>
                                 <li><a data-scroll="scrollTo" href="#clients">clients</a>
                                 </li>
-                                <li><a data-scroll="scrollTo" href="/User/signin/">Connexion</a>
+                                <li><a data-scroll="scrollTo" href="/User/account/login/">Connexion</a>
                                 </li>
                                 <li><a data-scroll="scrollTo" href="/User/subscribe/">S'inscrire</a>
                                 </li>
@@ -41,8 +41,12 @@
             </header>
 
             <section id="hero" class="section hero">
-                {% block content %}
-                {% endblock %}
+                <div class="row clearfix">
+                    <div class="col-12 col-sm-12 col-md-12 col-lg-8 offset-lg-2">
+                        {% block content %}
+                        {% endblock %}
+                    </div>
+                </div>
             </section>
 
             <footer id="footer" class="footer">

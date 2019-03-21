@@ -1,1 +1,10 @@
-﻿USER
+﻿{% extends 'indexIntegration.html' %}
+
+{% block content %}
+{% if user.is_authenticated %}
+    Bonjour {{ user.username }}
+    <a href="{% url 'logout' %}">Déconnexion</a>
+{% else %}
+    <a href="{% url 'login' %}">Connexion</a>
+{% endif %}
+{% endblock %}

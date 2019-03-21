@@ -1,10 +1,9 @@
-﻿from django.urls import path
+﻿from django.urls import path, include
 from .views import *
 
 urlpatterns = [
     path('', index),
-    path('signin/', signin),
     path('subscribe/', subscribe),
-    path('subscribe/error/', subscribe),
-    path('<str:user>/', account),
+    path('account/', include('django.contrib.auth.urls')),
+    path('member/', member)
 ]

@@ -1,33 +1,36 @@
 ﻿from django import forms
-from User.models import User
+from django.contrib.auth.models import User
+from User.models import Profil
 
 class UserForm(forms.ModelForm) :
     emailConfirm = forms.EmailField(max_length=70, label='Confirmez l\'email')
-    passwordConfirm = forms.CharField(max_length=30, label='Confirmez le mot de passe')
+    passwordConfirm = forms.CharField(max_length=30, widget=forms.PasswordInput())
 
     class Meta:
         model = User
-        widgets = {
-            'password': forms.PasswordInput()
-        }
+        fields = (
+            'username',
+            'password',
+            'passwordConfirm',
+            'email',
+            'emailConfirm',
+            'last_name',
+            'first_name'
+        )
+        
+
+class ProfilForm(forms.ModelForm) :
+    class Meta:
+        model = Profil
         labels = {
-            'prenom': 'Prénom',
             'societe': 'Société',
             'cp': 'Code postal',
             'pathlogo': 'Logo',
-            'password': 'Mot de passe'
         }
         fields = (
-            'nom', 
-            'prenom', 
-            'email',
-            'emailConfirm',
-            'societe', 
-            'adresse', 
-            'cp', 
-            'ville', 
-            'pathlogo', 
-            'pseudo', 
-            'password',
-            'passwordConfirm'
+            'societe',
+            'adresse',
+            'cp',
+            'ville',
+            'pathlogo'
         )

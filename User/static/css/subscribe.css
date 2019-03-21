@@ -21,7 +21,7 @@ footer .footer-top {
 #subscribe .containForm {
     display: block;
     float: left;
-    margin-right: 60px;
+    margin-right: 40px;
 }
 #subscribe label {
     display: block;
@@ -35,8 +35,7 @@ footer .footer-top {
 
 #subscribe input[type=text],
 #subscribe input[type=password],
-#subscribe input[type=email],
-#subscribe textarea {
+#subscribe input[type=email] {
     border: 1px solid #6262a0;
     width: 250px;
     height: 25px;
@@ -69,6 +68,6 @@ footer .footer-top {
 #id_pathlogo {
     min-width: 450px !important;
 }
-#id_pseudo, #id_password, #id_passwordConfirm {
+#id_username, #id_password, #id_passwordConfirm {
     width: 220px !important;
 }

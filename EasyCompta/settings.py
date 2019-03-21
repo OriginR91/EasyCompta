@@ -52,8 +52,9 @@ MIDDLEWARE = [
 
 ROOT_URLCONF = 'EasyCompta.urls'
 
-LOGIN_REDIRECT_URL = '/Account/'
-LOGIN_URL = '/User/signin/'
+LOGIN_REDIRECT_URL = '/User/'
+LOGOUT_REDIRECT_URL = '/User/account/login/'
+LOGIN_URL = '/User/account/login/'
 
 TEMPLATES = [
     {
