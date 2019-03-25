@@ -5,5 +5,5 @@ urlpatterns = [
     path('', index),
     path('subscribe/', subscribe),
     path('account/', include('django.contrib.auth.urls')),
-    path('member/', member)
+    path('account/login/', user_login, name='user_login')
 ]

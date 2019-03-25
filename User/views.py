@@ -10,8 +10,29 @@ fileCss = ""
 
 def index(request) :
     template = loader.get_template('User/index.html')
-    context = {}
+    context = {
+        'test': 'OK'
+    }
     return HttpResponse(template.render(context, request))
+
+def user_login(request) :
+    if request.method == 'POST' :
+        form = UserForm(request.POST)
+        if form.is_valid() :
+            username = request.POST.get('username')
+            password = request.POST.get('password')
+            user = authenticate(username=username, password=password)
+
+            if user :
+                login(request, user)
+                return HttpResponseRedirect('/User/')
+    else :
+        form = UserForm()
+        context = {
+            'form': form,
+            'test': 'OK'
+        }
+        return render(request, 'registration/login.html', context)
 
 def subscribe(request) :
     fileCss = sys._getframe().f_code.co_name
