@@ -1,6 +1,6 @@
 import sys
 from django.shortcuts import render, loader
-from django.contrib.auth import authenticate as auth_authenticate, login as auth_login, logout
+from django.contrib.auth import authenticate, login, logout
 from django.contrib.auth.decorators import login_required
 from django.http import HttpResponse, HttpResponseRedirect
 from User.forms import UserForm, ProfilForm
