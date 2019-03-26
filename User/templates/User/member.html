@@ -1,0 +1,10 @@
+﻿{% extends 'indexIntegration.html' %}
+
+{% block content %}
+{% if user.is_authenticated %}
+{{ profil.user.username }}<br />
+{{ profil.societe }}<br />
+<br /><br /><br />
+<a href="{% url 'logout' %}">Déconnexion</a>
+{% endif %}
+{% endblock %}

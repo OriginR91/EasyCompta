@@ -52,9 +52,9 @@ MIDDLEWARE = [
 
 ROOT_URLCONF = 'EasyCompta.urls'
 
-LOGIN_REDIRECT_URL = '/User/'
-LOGOUT_REDIRECT_URL = '/User/account/login/'
-LOGIN_URL = '/User/account/login/'
+LOGIN_REDIRECT_URL = '/User/member/'
+LOGOUT_REDIRECT_URL = '/User/'
+LOGIN_URL = '/User/'
 
 TEMPLATES = [
     {
@@ -110,7 +110,7 @@ AUTH_PASSWORD_VALIDATORS = [
 # Internationalization
 # https://docs.djangoproject.com/en/2.1/topics/i18n/
 
-LANGUAGE_CODE = 'en-us'
+LANGUAGE_CODE = 'fr-FR'
 
 TIME_ZONE = 'Europe/Paris'
 

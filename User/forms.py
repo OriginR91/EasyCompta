@@ -4,6 +4,7 @@ from User.models import Profil
 
 class UserForm(forms.ModelForm) :
     emailConfirm = forms.EmailField(max_length=70, label='Confirmez l\'email')
+    password = forms.CharField(max_length=30, widget=forms.PasswordInput())
     passwordConfirm = forms.CharField(max_length=30, widget=forms.PasswordInput())
 
     class Meta:
