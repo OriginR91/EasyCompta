@@ -3,7 +3,7 @@
 }
 
 .infosProfil {
-    width: 200px;
-    border-right: 1px solid #999;
+    max-width: 200px;
+    border-right: 1px solid #C3C3C3;
     text-align: center;
 }
