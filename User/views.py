@@ -6,8 +6,6 @@ from django.http import HttpResponse, HttpResponseRedirect
 from User.forms import UserForm, ProfilForm
 from .models import Profil
 
-# Globals
-fileCss = ""
 
 def index(request) :
     template = loader.get_template('User/index.html')
@@ -17,8 +15,6 @@ def index(request) :
     return HttpResponse(template.render(context, request))
 
 def subscribe(request) :
-    fileCss = sys._getframe().f_code.co_name
-
     if request.method == 'POST' :
         formUser = UserForm(request.POST)
         formProfil = ProfilForm(request.POST)
@@ -48,7 +44,7 @@ def subscribe(request) :
         context = {
             'formUser': formUser,
             'formProfil': formProfil,
-            'fileCss': fileCss
+            'fileCss': sys._getframe().f_code.co_name
         }
         return HttpResponse(template.render(context, request))
 
@@ -57,6 +53,7 @@ def member(request) :
     profil = Profil.objects.get(user=request.user)
     template = loader.get_template('User/member.html')
     context = {
+        'fileCss': sys._getframe().f_code.co_name,
         'profil': profil
     }
     return HttpResponse(template.render(context, request))

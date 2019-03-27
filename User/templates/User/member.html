@@ -1,10 +1,15 @@
 ﻿{% extends 'indexIntegration.html' %}
 
 {% block content %}
-{% if user.is_authenticated %}
-{{ profil.user.username }}<br />
-{{ profil.societe }}<br />
-<br /><br /><br />
-<a href="{% url 'logout' %}">Déconnexion</a>
-{% endif %}
+<div class="infosProfil">
+    {% if user.is_authenticated %}
+    Profil de {{ profil.user.username }}<br />
+    {{ profil.user.first_name }} {{ profil.user.last_name }}<br />
+    {{ profil.societe }}<br />
+    {{ profil.adresse }}<br />
+    {{ profil.cp }} - {{ profil.ville }}<br />
+    <br /><br /><br />
+    <a href="{% url 'logout' %}">Déconnexion</a>
+    {% endif %}
+</div>
 {% endblock %}
