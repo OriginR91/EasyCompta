@@ -57,3 +57,7 @@ def member(request) :
         'profil': profil
     }
     return HttpResponse(template.render(context, request))
+
+def user_login(request) :
+    if request.user.is_authenticated() :
+        return HttpResponseRedirect('/User/member/')

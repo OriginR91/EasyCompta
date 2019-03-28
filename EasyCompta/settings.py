@@ -54,7 +54,7 @@ ROOT_URLCONF = 'EasyCompta.urls'
 
 LOGIN_REDIRECT_URL = '/User/member/'
 LOGOUT_REDIRECT_URL = '/User/'
-LOGIN_URL = '/User/'
+LOGIN_URL = '/User/account/login/'
 
 TEMPLATES = [
     {
