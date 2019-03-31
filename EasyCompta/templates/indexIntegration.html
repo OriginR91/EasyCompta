@@ -25,14 +25,22 @@
                             <ul class="navbar-nav ml-auto">
                                 <li class="active"><a data-scroll="scrollTo" href="/">home</a>
                                 </li>
-                                <li><a data-scroll="scrollTo" href="#feature2">feature</a>
-                                </li>
-                                <li><a data-scroll="scrollTo" href="#clients">clients</a>
-                                </li>
-                                <li><a data-scroll="scrollTo" href="/User/account/login/">Connexion</a>
+                                {% if not user.is_authenticated %}
+                                <li><a data-scroll="scrollTo" href="/User/login/">Connexion</a>
                                 </li>
                                 <li><a data-scroll="scrollTo" href="/User/subscribe/">S'inscrire</a>
                                 </li>
+                                {% else %}
+                                <li class="active">
+                                    <a href="/Accounting/">Facturation</a>
+                                </li>
+                                <li class="active">
+                                    <a href="/User/member/">Mon compte</a>
+                                </li>
+                                <li class="active">
+                                    <a href="{% url 'user_logout' %}">Déconnexion</a>
+                                </li>
+                                {% endif %}
                             </ul>
                         </div>
                         <!--/.nav-collapse -->

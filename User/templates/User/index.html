@@ -3,8 +3,8 @@
 {% block content %}
 {% if user.is_authenticated %}
     Bonjour {{ user.username }}
-    <a href="{% url 'logout' %}">Déconnexion</a>
+    <a href="{% url 'user_logout' %}">Déconnexion</a>
 {% else %}
-    <a href="{% url 'login' %}">Connexion</a>
+    <a href="{% url 'user_login' %}">Connexion</a>
 {% endif %}
 {% endblock %}

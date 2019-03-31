@@ -20,5 +20,6 @@ from EasyCompta import views
 urlpatterns = [
     path('', views.index),
     path('User/', include('User.urls')),
+    path('Accounting/', include('Accounting.urls')),
     path('admin/', admin.site.urls),
 ]

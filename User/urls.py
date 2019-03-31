@@ -2,9 +2,9 @@
 from .views import *
 
 urlpatterns = [
-    path('', index),
+    path('', home, name='home'),
     path('subscribe/', subscribe, name='subscribe'),
-    path('account/', include('django.contrib.auth.urls')),
-    path('account/login/', user_login, name='user_login'),
+    path('login/', user_login, name='user_login'),
+    path('logout/', user_logout, name='user_logout'),
     path('member/', member, name='member')
 ]

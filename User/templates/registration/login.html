@@ -6,7 +6,11 @@
 {% else %}
 <form method="POST">
     {% csrf_token %}
-    {{ form.as_p }}
+    <label for="id_username">Pseudo :</label><br />
+    {{ form.username }}<br /><br />
+
+    <label for=id_password>Mot de passe :</label><br />
+    {{ form.password }}<br /><br />
 
     <input type="submit" value="Connexion" />
 </form>
