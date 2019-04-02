@@ -27,7 +27,6 @@ def subscribe(request) :
                     user.save()
 
                     profil = formProfil.save(commit=False)
-
                     profil.user = user
 
                     formProfil.save()
