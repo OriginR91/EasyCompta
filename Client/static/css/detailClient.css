@@ -1,0 +1,14 @@
+﻿.menu {
+    width: 150px;
+    float: left;
+    border-right: 1px solid #C9C9C9;
+}
+.menu a {
+    display: block;
+}
+
+.desc {
+    width: 80%;
+    float: right;
+    padding: 0 0 0 20px;
+}

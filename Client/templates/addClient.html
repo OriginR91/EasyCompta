@@ -1,0 +1,23 @@
+﻿{% extends 'IndexIntegration.html' %}
+
+{% block content %}
+<form method="POST">
+    {% csrf_token %}
+    <label for="id_client_nom">Nom : </label><br />
+    {{ form.client_nom }} <br /><br />
+
+    <label for="id_client_siret">N° Siret : </label><br />
+    {{ form.client_siret }} <br /><br />
+
+    <label for="id_client_adresse">Adresse : </label><br />
+    {{ form.client_adresse }} <br /><br />
+
+    <label for="id_client_cp">Code postal : </label><br />
+    {{ form.client_cp }} <br /><br />
+
+    <label for="id_client_ville">Ville : </label><br />
+    {{ form.client_ville }}<br /><br />
+
+    <input type="submit" value="Ajouter" />
+</form>
+{% endblock %}

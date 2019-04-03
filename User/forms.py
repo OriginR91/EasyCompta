@@ -26,7 +26,7 @@ class ProfilForm(forms.ModelForm) :
         labels = {
             'societe': 'Société',
             'cp': 'Code postal',
-            'pathlogo': 'Logo',
+            'pathlogo': 'Logo'
         }
         fields = (
             'societe',

@@ -1,1 +1,15 @@
-﻿Cleint
+﻿{% extends 'IndexIntegration.html' %}
+
+{% block content %}
+<div class="menu">
+    <a href="{% url 'addClient' %}">Ajouter un client</a>
+    <a href="{% url 'manageClient' %}">Gérer mes clients</a>
+</div>
+
+<div class="desc">
+    Liste des clients : <br />
+    {% for c in clients %}
+        <a href="{% url 'detailClient' pk=c.pk %}">{{ c.client_nom }}</a><br />
+    {% endfor %}
+</div>
+{% endblock %}

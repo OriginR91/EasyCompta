@@ -1,0 +1,17 @@
+﻿{% extends 'IndexIntegration.html' %}
+
+{% block content %}
+<div class="menu">
+    <a href="/Client/">Mes clients</a>
+    <a href="{% url 'addClient' %}">Ajouter un client</a>
+    <a href="{% url 'manageClient' %}">Gérer mes clients</a>
+</div>
+
+<div class="desc">
+    Nom du client : {{ client.client_nom}} <br />
+    N° Siret : {{ client.client_siret }} <br />
+    Adresse : {{ client.client_adresse }} <br />
+    Code postal : {{ client.client_cp }} <br />
+    Ville : {{ client.client_ville }}
+</div>
+{% endblock %}
