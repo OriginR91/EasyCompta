@@ -28,13 +28,16 @@ def addClient(request) :
     }
     return render(request, 'addClient.html', context)
 
-def detailClient(request, pk) :
-    cl = get_object_or_404(Client, pk=pk)
-    context = {
-        'fileCss': sys._getframe().f_code.co_name,
-        'client': cl
-    }
-    return render(request, 'detailClient.html', context)
+def detailClient(request, pk=0) :
+    if pk > 0 :
+        cl = get_object_or_404(Client, pk=pk)
+        context = {
+            'fileCss': sys._getframe().f_code.co_name,
+            'client': cl
+        }
+        return render(request, 'detailClient.html', context)
+    else :
+        return HttpResponseRedirect('/Client/')
 
 def manageClient(request) :
     pass

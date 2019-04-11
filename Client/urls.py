@@ -4,6 +4,7 @@ from Client.views import *
 urlpatterns = [
     path('', homeClient, name='homeClient'),
     path('addClient/', addClient, name='addClient'),
+    path('detailClient/', detailClient, name='detailClient'),
     path('detailClient/<int:pk>/', detailClient, name='detailClient'),
     path('manageClient/', manageClient, name='manageClient')
 ]
