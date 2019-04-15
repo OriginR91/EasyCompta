@@ -8,8 +8,12 @@
 
 <div class="desc">
     Liste des clients : <br />
-    {% for c in clients %}
-        <a href="{% url 'detailClient' pk=c.pk %}">{{ c.client_nom }}</a><br />
-    {% endfor %}
+    {% if clients.client_nom|length > 0 %}
+        {% for c in clients %}
+            <a href="{% url 'detailClient' pk=c.pk %}">{{ c.client_nom }}</a><br />
+        {% endfor %}
+    {% else %}
+        {{ clients }}
+    {% endif %}
 </div>
 {% endblock %}
