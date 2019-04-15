@@ -1,3 +1,4 @@
+from django.contrib.auth.models import User
 from django.db import models
 
 # Create your models here.
@@ -7,6 +8,7 @@ class Client(models.Model) :
     client_adresse = models.CharField(max_length=255)
     client_cp = models.CharField(max_length=20)
     client_ville = models.CharField(max_length=60)
+    client_user = models.OneToOneField(User, on_delete=models.CASCADE)
 
     def __str__(self) :
         return "{} {} {} {} {}".format(
