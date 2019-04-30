@@ -70,6 +70,8 @@ def user_login(request) :
             if user :
                 login(request, user)
                 return HttpResponseRedirect('/User/member/')
+            else :
+                return HttpResponseRedirect('/User/login/')
         else :
             form = UserForm()
             context = {
