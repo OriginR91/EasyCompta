@@ -19,9 +19,8 @@ def addClient(request) :
         if form.is_valid() :
             form.save()
             return HttpResponseRedirect('/Client/')
-    else :
-        form = ClientForm()
-
+    
+    form = ClientForm()
     context = {
         'form': form,
         'fileCss': sys._getframe().f_code.co_name
